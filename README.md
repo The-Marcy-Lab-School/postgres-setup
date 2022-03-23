@@ -23,7 +23,7 @@
 - Click on the downloads tab
 - You should see something like "Postgres.app with PostgreSQL [version]". Click on this link to download Postgres to your mac.
 - After it's finish downloading, install the program, and run it.
-- Now you'll have to initialize your database. Click the initialize button on the right hand side.
+- Now you'll have to initialize your database. Click the Start button on the right hand side.
 - Open up a terminal window (hint: you can press `command` + `space` and type in terminal) and paste this inside `sudo mkdir -p /etc/paths.d &&
 echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp`
 - To test that this command works, you'll have to restart your terminal.
