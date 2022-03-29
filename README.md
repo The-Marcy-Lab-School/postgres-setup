@@ -12,7 +12,7 @@
 - Now, connect to the postgres service and open the psql shell: `sudo -u postgres psql`
 - Once you have successfully entered the psql shell, you will see your command line change to look like this: `postgres=#`
 - Now we'll add a password for the user you created earlier: `alter user [username] with encrypted password '[password]';`. Replace the username with the username you created earlier, and make your password short and memorable. NOTE: Keep the quotation marks around your password!
-- Let's make our user a superuser: `ALTER USER [user you created] WITH SUPERUSER;`
+- Let's make our user a superuser: `ALTER USER [username] WITH SUPERUSER;`
 - You can now exit your psql shell by typing in `\q` and hitting enter
 - You will download a GUI application called [tableplus](tableplus.com) from their website. Make sure to download the corresponding version for your OS.
 - After installing and opening the application, click the "Create A New Connection..." towards the bottom of the window. You will see a prompt to select your database type. Select Postgresql.
