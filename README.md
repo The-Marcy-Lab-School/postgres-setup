@@ -24,7 +24,7 @@
 - Click on the downloads tab
 - You should see something like "Postgres.app with PostgreSQL [version]". Click on this link to download Postgres to your mac.
 - After it's finish downloading, install the program, and run it.
-- Now you'll have to initialize your database. Click the initialize button on the right hand side.
+- Now you'll have to initialize your database. Click the Initialize button on the right hand side.
 - Open up a terminal window (hint: you can press `command` + `space` and type in terminal) and paste this inside `sudo mkdir -p /etc/paths.d &&
 echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp`
 - To test that this command works, you'll have to restart your terminal.
@@ -33,4 +33,9 @@ echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/pat
 - After installing and opening the application, click the "Create A New Connection..." towards the bottom of the window. You will see a prompt to select your database type. Select Postgresql.
 - Now you'll enter the credetials to access your database. Enter the name of the database as "Example DB". For the user field enter `postgres` and in the database field enter example. Click the test button and if everything is successful, all of the fields should be highlighted green! At that point click connect and you should be able to see view the GUI client for you database. If you want, you can click the `sql` tab and write your own sql queries.
 
-If you'd like, you can follow along at the 1:09 mark from class to watch us do it live. [video](https://us02web.zoom.us/rec/play/U0ghC07ndSiayEEc1D86cvrNIiBIQhmyT7JU8sqrYJ928FHhZhKfq7OeYK73u1aRp6Qjb34kf32xoARm.7BAFARTMcCax8YDy?continueMode=true&_x_zm_rtaid=euzsucDSTBKnY0bdQQBC5A.1648070136259.165c763c787813cfbdcf7752e530272c&_x_zm_rhtaid=405)
+
+## Video Walkthrough
+If you'd like, you can follow along using this [video](https://us02web.zoom.us/rec/play/U0ghC07ndSiayEEc1D86cvrNIiBIQhmyT7JU8sqrYJ928FHhZhKfq7OeYK73u1aRp6Qjb34kf32xoARm.7BAFARTMcCax8YDy?continueMode=true&_x_zm_rtaid=euzsucDSTBKnY0bdQQBC5A.1648070136259.165c763c787813cfbdcf7752e530272c&_x_zm_rhtaid=405).
+
+* For Windows users, start at 1 hour and 9 minutes time stamp 01:09:00.
+* For Mac users, start at 1 hour and 27 minutes time stamp 01:27:00.
