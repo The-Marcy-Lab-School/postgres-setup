@@ -31,7 +31,7 @@ echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/pat
 8. In your terminal type in `createdb example`. You should not get an error after the command runs. Now let's see it in action!
 9. You will download a GUI application called [tableplus](tableplus.com) from their website. Make sure to download the corresponding version for your OS.
 10. After installing and opening the application, click the "Create A New Connection..." towards the bottom of the window. You will see a prompt to select your database type. Select Postgresql.
-11. Now you'll enter the credetials to access your database. Enter the name as "postgres". For the user field enter "postgres" and in the database field enter "postgres". Click the test button and if everything is successful, all of the fields should be highlighted green! At that point click connect and you should be able to see view the GUI client for you database. If you want, you can click the `SQL` tab and write your own sql queries.
+11. Now you'll enter the credetials to access your database. Enter the name as "postgres". For the user field enter "postgres" and in the database field enter "example". Click the test button and if everything is successful, all of the fields should be highlighted green! At that point click connect and you should be able to see view the GUI client for you database. If you want, you can click the `SQL` tab and write your own sql queries.
 
 
 ## Video Walkthrough
