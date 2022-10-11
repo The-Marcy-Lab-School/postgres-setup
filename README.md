@@ -34,7 +34,7 @@ echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/pat
 9. You will download a GUI application called [tableplus](tableplus.com) from their website. Make sure to download the corresponding version for your OS.
 10. After installing and opening the application, click the "Create A New Connection..." towards the bottom of the window. You will see a prompt to select your database type. Select Postgresql.
 11. Now you'll enter the credetials to access your database. Enter the name as "postgres". For the user field enter "postgres" and in the database field enter "example". The Host and Port fields should be autopopulated, but if not, for Host, enter "localhost" or "127.0.0.1". For Port, enter "5432". Click the test button and if everything is successful, all of the fields should be highlighted green! At that point click connect and you should be able to see view the GUI client for you database. If you want, you can click the `SQL` tab and write your own sql queries.
-12. **Note:** If you get a `Could not connect to server: Connection refused` error, this means you have to first start your postgres server in the menu bar`.
+12. **Note:** If you get a `Could not connect to server: Connection refused` error, this means you have to first start your postgres server in the menu bar. Click the Start button so that the Red X turns into a Green checkmark.
 
 <img width="234" alt="Screen Shot 2022-10-11 at 4 19 14 PM" src="https://user-images.githubusercontent.com/30392423/195190310-8f4ed82c-bebd-4fb5-bc96-3fcaa2ed9848.png">
 
