@@ -14,7 +14,7 @@
 - Now we'll add a password for the user you created earlier: `alter user [username] with encrypted password '[password]';`. Replace the username with the username you created earlier, and make your password short and memorable. NOTE: Keep the quotation marks around your password!
 - Let's make our user a superuser: `ALTER USER [username] WITH SUPERUSER;`
 - You can now exit your psql shell by typing in `\q` and hitting enter
-- You will download a GUI application called [tableplus](tableplus.com) from their website. Make sure to download the corresponding version for your OS.
+- You will download a GUI application called [tableplus](https://tableplus.com/) from their website. Make sure to download the corresponding version for your OS.
 - After installing and opening the application, click the "Create A New Connection..." towards the bottom of the window. You will see a prompt to select your database type. Select Postgresql.
 - Now you'll enter the credetials to access your database. Enter the name of the database as "Example DB". For the user field enter the username you specified earlier and in the password field enter the password you created for that user. Click the test button and if everything is successful, all of the fields should be highlighted green! At that point click connect and you should be able to see view the GUI client for you database. If you want, you can click the `sql` tab and write your own sql queries.
 
