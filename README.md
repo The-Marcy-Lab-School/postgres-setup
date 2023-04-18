@@ -43,3 +43,18 @@ If you'd like, you can follow along using this [video](https://us02web.zoom.us/r
 
 * For Windows users, start at 1 hour and 9 minutes time stamp 01:09:00.
 * For Mac users, start at 1 hour and 27 minutes time stamp 01:27:00.
+
+## Troubleshooting
+
+If you can't connect to your database because of `FATAL: password authentication failed for user <username>`, ask your instructor for hekp. They will do the following:
+
+* Find and edit your `pg_hba.conf` using `vim`: `sudo vim /etc/postgresql/12/main/pg_hba.conf` (where `12` is the version number) 
+* Alternately, find notepad or notepad++ in your start menu, right click, choose "Run as administrator", then use File->Open to open `pg_hba.conf` that way.
+* Update the `"host"` line for user `"postgres"` on host `"127.0.0.1/32"` from `"md5"` to `"trust"`. 
+  * You can add the line if it isn't there; just insert `host all postgres 127.0.0.1/32 trust` before any other lines. (You can ignore comments, lines beginning with #).
+* Restart the PostgreSQL service: `sudo service postgresql restart`
+* Connect using `sudo -u postgres psql` / `psql`
+* Run `ALTER USER postgres PASSWORD 'fooBarEatsBarFoodBareFoot';` (don't forget the `;`!)
+* Remove the line you added to `pg_hba.conf` or change it back
+* Restart PostgreSQL again to bring the changes to effect.
+* Try connecting again
