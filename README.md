@@ -1,6 +1,13 @@
 # Postgres Setup
 
-## Windows
+**Table of Contents**
+- [Windows Setup](#windows-setup)
+- [Mac Setup](#mac-setup)
+- [Video Walkthrough](#video-walkthrough)
+- [Troubleshooting](#troubleshooting)
+- [Important Commands](#important-commands)
+
+## Windows Setup
 1. Open up your Ubuntu Terminal
 2. Update your Ubuntu packages: `sudo apt update`
 3. Now, type `sudo apt install postgresql postgresql-contrib`. You may have to type in `Y`, to allow it to proceed. This will install postgres on your Ubuntu machine.
@@ -20,7 +27,7 @@
 17. **Note:** If you get a `Could not connect to server: Connection refused` error, this means you have to first start your postgres server in the terminal using the command `sudo service postgresql start`.
 
 
-## Mac
+## Mac Setup
 
 1. Go to [https://postgresapp.com/](https://postgresapp.com/)
 2. Click on the downloads tab
@@ -58,3 +65,16 @@ If you can't connect to your database because of `FATAL: password authentication
 * Remove the line you added to `pg_hba.conf` or change it back
 * Restart PostgreSQL again to bring the changes to effect.
 * Try connecting again
+
+## Important Commands
+
+- `sudo service postgresql status` - to see if your server is running 
+- `sudo service postgresql start` - to start your postgresql server
+- `sudo service postgresql restart` - to restart your postgresql server
+- `sudo -u postgres psql` / `psql` - to connect to your postgresql server
+
+In your postgresql server
+- `\du` to see a list of users
+- `\q` to quit
+- `\l` to see a list of databases
+- `\c database_name` to connect to a database
