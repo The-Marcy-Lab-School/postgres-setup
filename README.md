@@ -46,7 +46,7 @@ If you'd like, you can follow along using this [video](https://us02web.zoom.us/r
 
 ## Troubleshooting
 
-If you can't connect to your database because of `FATAL: password authentication failed for user <username>`, ask your instructor for hekp. They will do the following:
+If you can't connect to your database because of `FATAL: password authentication failed for user <username>`, ask your instructor for help. They will do the following:
 
 * Find and edit your `pg_hba.conf` using `vim`: `sudo vim /etc/postgresql/12/main/pg_hba.conf` (where `12` is the version number) 
 * Alternately, find notepad or notepad++ in your start menu, right click, choose "Run as administrator", then use File->Open to open `pg_hba.conf` that way.
