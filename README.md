@@ -8,6 +8,8 @@
 - [Important Commands](#important-commands)
 
 ## Windows Setup
+
+#### Postgres
 1. Open up your Ubuntu Terminal
 2. Update your Ubuntu packages: `sudo apt update`
 3. Now, type `sudo apt install postgresql postgresql-contrib`. You may have to type in `Y`, to allow it to proceed. This will install postgres on your Ubuntu machine.
@@ -15,15 +17,15 @@
 5. Afterwards, you'll probably have to start the postgres database. You can do so by running `sudo service postgresql start`. Afterwards, you can check the status by running `sudo service postgresql status`.
 6. Afterwards, you'll need to set up a password for the postgres user so you can log into the database. You can do this by running `sudo passwd postgres`. NOTE: make this something very easy to remember. You won't see anything in terminal but rest assured, it's taking in your input.
 7. Close and reopen your terminal.
-8. Now we are going to create a new user: `sudo -u postgres createuser [replace this with your username]`
-9. Now, connect to the postgres service and open the psql shell: `sudo -u postgres psql`
-10. Once you have successfully entered the psql shell, you will see your command line change to look like this: `postgres=#`
-11. Now we'll add a password for the user you created earlier: `alter user [username] with encrypted password '[password]';`. Replace the username with the username you created earlier, and make your password short and memorable. NOTE: Keep the quotation marks around your password!
-12. Let's make our user a superuser: `ALTER USER [username] WITH SUPERUSER;`
-13. You can now exit your psql shell by typing in `\q` and hitting enter
+8. Now, connect to the postgres service and open the psql shell: `sudo -u postgres psql`
+9. Once you have successfully entered the psql shell, you will see your command line change to look like this: `postgres=#`
+10. Now we'll add a password for the `postgres` user: `alter user postgres with encrypted password '[password]';`. Replace the password with something short and memorable (e.g. `'123'` is fine). NOTE: Keep the quotation marks around your password!
+11. You can now exit your psql shell by typing in `\q` and hitting enter
+
+#### Tableplus
 14. You will download a GUI application called [tableplus](https://tableplus.com/) from their website. Make sure to download the corresponding version for your OS.
 15. After installing and opening the application, click the "Create A New Connection..." towards the bottom of the window. You will see a prompt to select your database type. Select Postgresql.
-16. Now you'll enter the credetials to access your database. Enter the name as "postgres". For Host, enter "localhost" or "127.0.0.1". For Port, enter "5432". For the user field enter the username you specified earlier in step 8. In the password field, enter the password you created for that user in step 11. Lastly, enter the name of the database as "postgres". Click the test button and if everything is successful, all of the fields should be highlighted green! At that point click connect and you should be able to see view the GUI client for you database. If you want, you can click the `SQL` button and write your own sql queries.
+16. Now you'll enter the credetials to access your database. Enter the name as "postgres". For Host, enter "localhost" or "127.0.0.1". For Port, enter "5432". For the user field enter `postgres`. In the password field, enter the password you created for user `postgres` in step 10. Lastly, enter the name of the database as "postgres". Click the test button and if everything is successful, all of the fields should be highlighted green! At that point click connect and you should be able to see view the GUI client for you database. If you want, you can click the `SQL` button and write your own sql queries.
 17. **Note:** If you get a `Could not connect to server: Connection refused` error, this means you have to first start your postgres server in the terminal using the command `sudo service postgresql start`.
 
 
