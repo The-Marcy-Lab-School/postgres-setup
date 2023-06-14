@@ -1,11 +1,33 @@
 # Postgres Setup
 
 **Table of Contents**
+- [Important Commands](#important-commands)
 - [Windows Setup](#windows-setup)
 - [Mac Setup](#mac-setup)
 - [Video Walkthrough](#video-walkthrough)
 - [Troubleshooting](#troubleshooting)
-- [Important Commands](#important-commands)
+
+
+## Important Commands
+
+In your terminal:
+- `sudo service postgresql status` - to see if your server is running 
+- `sudo service postgresql start` - to start your postgresql server
+- `sudo service postgresql restart` - to restart your postgresql server
+- `sudo -u postgres psql` / `psql` - to connect to your postgresql server
+
+In your `psql` terminal:
+- `\du` to see a list of users
+- `\q` to quit
+- `\l` to see a list of databases
+- `\c database_name` to connect to a database
+- `ALTER USER username WITH ENCRYPTED PASSWORD 'password';` (use single quotes, remember the semicolon)
+
+Postgres Server Connection Configuration
+- Host/Socket: `127.0.0.1` or `localhost`
+- Port: `5432`
+- User: Enter your username or `postgres`
+- Database: `postgres` (the default will be the same as the user value)
 
 ## Windows Setup
 
@@ -55,28 +77,17 @@ If you'd like, you can follow along using this [video](https://us02web.zoom.us/r
 
 ## Troubleshooting
 
-If you can't connect to your database because of `FATAL: password authentication failed for user <username>`, ask your instructor for help. They will do the following:
+1. If you can't connect to your database because of `FATAL: password authentication failed for user <username>`, ask your instructor for help. They will do the following:
 
-* Find and edit your `pg_hba.conf` using `vim`: `sudo vim /etc/postgresql/12/main/pg_hba.conf` (where `12` is the version number) 
-* Alternately, find notepad or notepad++ in your start menu, right click, choose "Run as administrator", then use File->Open to open `pg_hba.conf` that way.
-* Update the `"host"` line for user `"postgres"` on host `"127.0.0.1/32"` from `"md5"` to `"trust"`. 
-  * You can add the line if it isn't there; just insert `host all postgres 127.0.0.1/32 trust` before any other lines. (You can ignore comments, lines beginning with #).
-* Restart the PostgreSQL service: `sudo service postgresql restart`
-* Connect using `sudo -u postgres psql` / `psql`
-* Run `ALTER USER postgres PASSWORD 'fooBarEatsBarFoodBareFoot';` (don't forget the `;`!)
-* Remove the line you added to `pg_hba.conf` or change it back
-* Restart PostgreSQL again to bring the changes to effect.
-* Try connecting again
+  * Find and edit your `pg_hba.conf` using `vim`: `sudo vim /etc/postgresql/12/main/pg_hba.conf` (where `12` is the version number) 
+  * Alternately, find notepad or notepad++ in your start menu, right click, choose "Run as administrator", then use File->Open to open `pg_hba.conf` that way.
+  * Update the `"host"` line for user `"postgres"` on host `"127.0.0.1/32"` from `"md5"` to `"trust"`. 
+    * You can add the line if it isn't there; just insert `host all postgres 127.0.0.1/32 trust` before any other lines. (You can ignore comments, lines beginning with #).
+  * Restart the PostgreSQL service: `sudo service postgresql restart`
+  * Connect using `sudo -u postgres psql` / `psql`
+  * Run `ALTER USER postgres PASSWORD 'fooBarEatsBarFoodBareFoot';` (don't forget the `;`!)
+  * Remove the line you added to `pg_hba.conf` or change it back
+  * Restart PostgreSQL again to bring the changes to effect.
+  * Try connecting again
 
-## Important Commands
 
-- `sudo service postgresql status` - to see if your server is running 
-- `sudo service postgresql start` - to start your postgresql server
-- `sudo service postgresql restart` - to restart your postgresql server
-- `sudo -u postgres psql` / `psql` - to connect to your postgresql server
-
-In your postgresql server
-- `\du` to see a list of users
-- `\q` to quit
-- `\l` to see a list of databases
-- `\c database_name` to connect to a database
