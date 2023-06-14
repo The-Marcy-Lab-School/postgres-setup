@@ -23,7 +23,7 @@ In your `psql` terminal:
 - `\c database_name` to connect to a database
 - `ALTER USER username WITH ENCRYPTED PASSWORD 'password';` (use single quotes, remember the semicolon)
 
-Postgres Server Connection Configuration
+Tableplus Postgres Server Connection Configuration
 - Host/Socket: `127.0.0.1` or `localhost`
 - Port: `5432`
 - User: Enter your username or `postgres`
