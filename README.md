@@ -8,7 +8,7 @@
 - [Troubleshooting](#troubleshooting)
 
 
-## Important Commands
+## Important Commands / Configuration
 
 In your terminal:
 - `sudo service postgresql status` - to see if your server is running 
