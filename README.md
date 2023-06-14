@@ -1,7 +1,7 @@
 # Postgres Setup
 
 **Table of Contents**
-- [Important Commands](#important-commands-configuration)
+- [Important Commands](#important-commands--configuration)
 - [Windows Setup](#windows-setup)
 - [Mac Setup](#mac-setup)
 - [Video Walkthrough](#video-walkthrough)
