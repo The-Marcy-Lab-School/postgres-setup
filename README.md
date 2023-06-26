@@ -41,7 +41,7 @@ Tableplus Postgres Server Connection Configuration
 7. Close and reopen your terminal.
 8. Now, connect to the postgres service and open the psql shell: `sudo -u postgres psql`
 9. Once you have successfully entered the psql shell, you will see your command line change to look like this: `postgres=#`
-10. Now we'll add a password for the `postgres` user: `alter user postgres with encrypted password '[password]';`. Replace the password with something short and memorable (e.g. `'123'` is fine). NOTE: Keep the quotation marks around your password!
+10. Now we'll add a password for the `postgres` user: `alter user postgres with encrypted password '[password]';`. Replace the password with something short and memorable (e.g. `'123'` is fine). NOTE: Keep the quotation marks around your password and the semicolon!
 11. You can now exit your psql shell by typing in `\q` and hitting enter
 
 #### Tableplus
