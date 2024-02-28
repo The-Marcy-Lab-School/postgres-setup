@@ -12,9 +12,9 @@ Postgres is a database management system. Uses for database systems include:
 
 **Table of Contents**
 - [Important Commands](#important-commands--configuration)
+- [Video Walkthrough](#video-walkthrough)
 - [Windows Setup](#windows-setup)
 - [Mac Setup](#mac-setup)
-- [Video Walkthrough](#video-walkthrough)
 - [Troubleshooting](#troubleshooting)
 
 ## Important Commands / Configuration
@@ -39,6 +39,12 @@ Tableplus Postgres Server Connection Configuration
 - Port: `5432`
 - User: Enter your username or `postgres`
 - Database: `postgres` (the default will be the same as the user value)
+
+## Video Walkthroughs
+If you'd like, you can follow along using this [video](https://us02web.zoom.us/rec/play/U0ghC07ndSiayEEc1D86cvrNIiBIQhmyT7JU8sqrYJ928FHhZhKfq7OeYK73u1aRp6Qjb34kf32xoARm.7BAFARTMcCax8YDy?continueMode=true&_x_zm_rtaid=euzsucDSTBKnY0bdQQBC5A.1648070136259.165c763c787813cfbdcf7752e530272c&_x_zm_rhtaid=405).
+
+* For Windows users, start at 1 hour and 9 minutes time stamp 01:09:00.
+* For Mac users, start at 1 hour and 27 minutes time stamp 01:27:00.
 
 ## Windows Setup
 
@@ -83,12 +89,6 @@ echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/pat
 12. **Note:** If you get a `Could not connect to server: Connection refused` error, this means you have to first start your Postgres server in the menu bar. Click the Start button so that the Red X turns into a Green checkmark.
 
 <img width="234" alt="Screen Shot 2022-10-11 at 4 19 14 PM" src="https://user-images.githubusercontent.com/30392423/195190310-8f4ed82c-bebd-4fb5-bc96-3fcaa2ed9848.png">
-
-## Video Walkthrough
-If you'd like, you can follow along using this [video](https://us02web.zoom.us/rec/play/U0ghC07ndSiayEEc1D86cvrNIiBIQhmyT7JU8sqrYJ928FHhZhKfq7OeYK73u1aRp6Qjb34kf32xoARm.7BAFARTMcCax8YDy?continueMode=true&_x_zm_rtaid=euzsucDSTBKnY0bdQQBC5A.1648070136259.165c763c787813cfbdcf7752e530272c&_x_zm_rhtaid=405).
-
-* For Windows users, start at 1 hour and 9 minutes time stamp 01:09:00.
-* For Mac users, start at 1 hour and 27 minutes time stamp 01:27:00.
 
 ## Troubleshooting
 
