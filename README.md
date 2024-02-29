@@ -33,8 +33,12 @@ In your `psql` terminal:
 - `\l` to see a list of databases
 - `\c database_name` to connect to a database
 - `\dt` to see a list of tables in the connected database
-- `SELECT * FROM table;` to see all rows from the given table (remember the semicolon)
-- `ALTER USER username WITH ENCRYPTED PASSWORD 'password';` to set a password (use single quotes, remember the semicolon)
+
+And you can also run any SQL commands from the `psql` terminal (remember the semicolon!):
+
+- `CREATE DATABASE db_name;` to create a new database 
+- `SELECT * FROM table;` to see all rows from the given table
+- `ALTER USER username WITH ENCRYPTED PASSWORD 'password';` to set a password (use single quotes)
 
 Tableplus Postgres Server Connection Configuration
 - Host/Socket: `127.0.0.1` or `localhost`
