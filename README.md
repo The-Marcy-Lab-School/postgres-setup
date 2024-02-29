@@ -25,7 +25,7 @@ In your terminal:
 - `sudo service postgresql status` - to see if your server is running 
 - `sudo service postgresql start` - to start your postgresql server
 - `sudo service postgresql restart` - to restart your postgresql server
-- `sudo -u postgres psql` / `psql` - to connect to your postgresql server
+- `sudo -u postgres psql` / `psql` - to connect to your postgresql server as the `postgres` user
 
 In your `psql` terminal:
 - `\du` to see a list of users
