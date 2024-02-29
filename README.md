@@ -11,40 +11,11 @@ Postgres is a database management system. Uses for database systems include:
 - Managing rules about the data. A rule might say November has 30 days. This means if someone enters November 31 as a date, this date will be rejected.
 
 **Table of Contents**
-- [Important Commands](#important-commands--configuration)
 - [Video Walkthrough](#video-walkthrough)
 - [Windows Setup](#windows-setup)
 - [Mac Setup](#mac-setup)
 - [Troubleshooting](#troubleshooting)
-
-## Important Commands / Configuration
-
-These commands are placed at the top of this guide for quick access. Proceed to the next section to set up Postgres on your computer.
-
-In your terminal:
-- `sudo service postgresql status` - to see if your server is running 
-- `sudo service postgresql start` - to start your postgresql server
-- `sudo service postgresql restart` - to restart your postgresql server
-- `sudo -u postgres psql` / `psql` - to connect to your postgresql server as the `postgres` user
-
-In your `psql` terminal:
-- `\du` to see a list of users
-- `\q` to quit
-- `\l` to see a list of databases
-- `\c database_name` to connect to a database
-- `\dt` to see a list of tables in the connected database
-
-And you can also run any SQL commands from the `psql` terminal (remember the semicolon!):
-
-- `CREATE DATABASE db_name;` to create a new database 
-- `SELECT * FROM table;` to see all rows from the given table
-- `ALTER USER username WITH ENCRYPTED PASSWORD 'password';` to set a password (use single quotes)
-
-Tableplus Postgres Server Connection Configuration
-- Host/Socket: `127.0.0.1` or `localhost`
-- Port: `5432`
-- User: Enter your username or `postgres`
-- Database: `postgres` (the default will be the same as the user value)
+- [Important Commands](#important-commands--configuration)
 
 ## Video Walkthroughs
 If you'd like, you can follow along using this [video](https://us02web.zoom.us/rec/play/U0ghC07ndSiayEEc1D86cvrNIiBIQhmyT7JU8sqrYJ928FHhZhKfq7OeYK73u1aRp6Qjb34kf32xoARm.7BAFARTMcCax8YDy?continueMode=true&_x_zm_rtaid=euzsucDSTBKnY0bdQQBC5A.1648070136259.165c763c787813cfbdcf7752e530272c&_x_zm_rhtaid=405).
@@ -54,24 +25,34 @@ If you'd like, you can follow along using this [video](https://us02web.zoom.us/r
 
 ## Windows Setup
 
-### Postgres
+### Installing Postgres
 1. Open up your Ubuntu Terminal
-2. Update your Ubuntu packages: `sudo apt update`
-3. Now, type `sudo apt install postgresql postgresql-contrib`. You may have to type in `Y`, to allow it to proceed. This will install Postgres on your Ubuntu machine.
-4. Confirm the installation and get the version number: `psql --version`
-5. Afterwards, you'll probably have to start the Postgres database. You can do so by running `sudo service postgresql start`. Afterward, you can check the status by running `sudo service postgresql status`.
-6. Afterwards, you'll need to set up a password for the `postgres` user so you can log into the database. You can do this by running `sudo passwd postgres`. NOTE: make this something very easy to remember. You won't see anything in the terminal but rest assured, it's taking in your input.
-7. Close and reopen your terminal.
-8. Now, connect to the Postgres service and open the psql shell: `sudo -u postgres psql`
-9. Once you have successfully entered the psql shell, you will see your command line change to look like this: `postgres=#`
-10. Now we'll add a password for the `postgres` user: `ALTER USER postgres WITH ENCRYPTED PASSWORD 'new_password';`. Replace the password with something short and memorable (e.g. `'123'` is fine). NOTE: Keep the quotation marks around your password and the semicolon!
-11. You can now exit your psql shell by typing in `\q` and hitting enter
+2. Make sure your Ubuntu packages are up to date by running the command: `sudo apt update`
+3. Now, install Postgres by running the command: `sudo apt install postgresql postgresql-contrib`. You may have to type in `Y`, to allow it to proceed.
+4. Confirm the installation and check the version number by running the command: `psql --version`
+
+### Configure your user password
+6. Start by turning on PostgreSQL. You can do so by running `sudo service postgresql start`. You can always check the status of PostgreSQL by running `sudo service postgresql status`.
+7. In order to access your Postgres databases, you'll need a user account (called a "role"). By default, the installation process creates a user called `postgres`. You'll need to set up a password for the `postgres` user so you can log into the database. You can do this by running `sudo passwd postgres`. NOTE: make this something very easy to remember. You won't see anything in the terminal but rest assured, it's taking in your input.
+8. Close and reopen your terminal.
+10. Now, connect to the Postgres service as the `postgres` user and open the `psql` shell by running the command: `sudo -u postgres psql`
+11. Once you have successfully entered the `psql` shell, you will see your command line change to look like this: `postgres=#`
+12. Now we'll add a password for the `postgres` user: `ALTER USER postgres WITH ENCRYPTED PASSWORD 'new_password';`. Replace the password with something short and memorable (e.g. `'123'` is fine). NOTE: Keep the quotation marks around your password and the semicolon!
+13. You can now exit your psql shell by typing in `\q` and hitting enter
 
 ### Tableplus
 14. You will download a GUI application called [tableplus](https://tableplus.com/) from their website. Make sure to download the corresponding version for your OS.
 15. After installing and opening the application, click the "Create A New Connection..." towards the bottom of the window. You will see a prompt to select your database type. Select Postgresql.
-16. Now, you'll enter the credentials to access your database. Enter the name as "postgres". For Host, enter "localhost" or "127.0.0.1". For Port, enter "5432". For the user field, enter `postgres`. In the password field, enter the password you created for user `postgres` in step 10. Lastly, enter the name of the database as "postgres". Click the test button, and if everything is successful, all of the fields should be highlighted green! At that point, click connect, and you should be able to view the GUI client for your database. If you want, you can click the `SQL` button and write your own SQL queries.
-17. **Note:** If you get a `Could not connect to server: Connection refused` error, this means you have to first start your postgres server in the terminal using the command `sudo service postgresql start`.
+16. Now, you'll enter the credentials to access your database.
+    - Enter the name as "postgres".
+    - For Host, enter "localhost" or "127.0.0.1"
+    - For Port, enter "5432".
+    - For the user field, enter `postgres`.
+    - In the password field, enter the password you created for user `postgres` in step 10.
+    - Lastly, enter the name of the database as "postgres".
+
+17. Click the test button, and if everything is successful, all of the fields should be highlighted green! At that point, click connect, and you should be able to view the GUI client for your database. If you want, you can click the `SQL` button and write your own SQL queries.
+18. **Note:** If you get a `Could not connect to server: Connection refused` error, this means you have to first start your postgres server in the terminal using the command `sudo service postgresql start`.
 
 
 ## Mac Setup
@@ -112,4 +93,29 @@ echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/pat
   * Restart PostgreSQL again to bring the changes to effect.
   * Try connecting again
 
+## Important Commands / Configuration
 
+In your terminal:
+- `sudo service postgresql status` - to see if your server is running 
+- `sudo service postgresql start` - to start your postgresql server
+- `sudo service postgresql restart` - to restart your postgresql server
+- `sudo -u postgres psql` / `psql` - to connect to your postgresql server as the `postgres` user
+
+In your `psql` terminal:
+- `\du` to see a list of users
+- `\q` to quit
+- `\l` to see a list of databases
+- `\c database_name` to connect to a database
+- `\dt` to see a list of tables in the connected database
+
+And you can also run any SQL commands from the `psql` terminal (remember the semicolon!):
+
+- `CREATE DATABASE db_name;` to create a new database 
+- `SELECT * FROM table;` to see all rows from the given table
+- `ALTER USER username WITH ENCRYPTED PASSWORD 'password';` to set a password (use single quotes)
+
+Tableplus Postgres Server Connection Configuration
+- Host/Socket: `127.0.0.1` or `localhost`
+- Port: `5432`
+- User: Enter your username or `postgres`
+- Database: `postgres` (the default will be the same as the user value)
