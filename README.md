@@ -32,6 +32,8 @@ In your `psql` terminal:
 - `\q` to quit
 - `\l` to see a list of databases
 - `\c database_name` to connect to a database
+- `\dt` to see a list of tables in the connected database
+- `SELECT * FROM table;` to see all rows from the given table (remember the semicolon)
 - `ALTER USER username WITH ENCRYPTED PASSWORD 'password';` to set a password (use single quotes, remember the semicolon)
 
 Tableplus Postgres Server Connection Configuration
