@@ -83,10 +83,11 @@ If you'd like, you can follow along using this [video](https://us02web.zoom.us/r
 3. You should see something like "Postgres.app with PostgreSQL [version]". Click on this link to download Postgres to your Mac.
 4. After it's finished downloading, install the program, and run it.
 5. Now, you'll have to initialize your database. Click the Initialize button on the right-hand side.
-6. Open up a terminal window (hint: you can press `command` + `space` and type in terminal) and paste this inside `sudo mkdir -p /etc/paths.d &&
+6. Open up a terminal window (hint: you can press <kbd>CMD + Space</kbd> and type in "terminal")
+7. Then, run this command `sudo mkdir -p /etc/paths.d &&
 echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp`
-7. To test that this command works, you'll have to restart your terminal.
-8. In your terminal, type in `createdb example`. You should not get an error after the command runs. Now let's see it in action!
+8. Restart your terminal
+9. In your terminal, type in `createdb example`. You should not get an error after the command runs. Now let's see it in action!
 
 ### Tableplus
 9. You will download a GUI application called [tableplus](https://tableplus.com/) from their website. Make sure to download the corresponding version for your OS.
