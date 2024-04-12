@@ -96,7 +96,7 @@ Interacting with Postgres through the command-line interface may make you feel l
 1. Download [tableplus](https://tableplus.com/) from their website. Make sure to download the corresponding version for your OS.
 2. After installing and opening the application, click the "Create A New Connection..." towards the bottom of the window. You will see a prompt to select the type of database you want to connect to. Select **Postgresql**.
 3. Now, you'll enter the configurations for this connection:
-    - The name of the connection is up to you. You can call it `marcy` if you'd like.
+    - The name of the connection is up to you. You can call it `marcy` or `postgres` if you'd like. In the future, if you ever want to connect to a different database server, you would set up a new connection and give it a descriptive name.
     - For Host, enter `localhost` or `127.0.0.1` (these are equivalent)
     - For Port, enter `5432`.
     - For the user field, enter `postgres`.
