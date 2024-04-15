@@ -115,11 +115,22 @@ Interacting with Postgres through the command-line interface may make you feel l
 
 ## Important Commands / Configuration
 
-In your terminal:
+### Checking your Postgres server status
+**For Windows users**, check your Postgres server status in your terminal:
 - `sudo service postgresql status` - to see if your server is running 
 - `sudo service postgresql start` - to start your postgresql server
 - `sudo service postgresql restart` - to restart your postgresql server
-- `sudo -u postgres psql` / `psql` - to connect to your postgresql server as the `postgres` user
+
+**For Mac users**, check your Postgres server status through the Postgres application.
+![Mac Postgres App](https://github.com/The-Marcy-Lab-School/postgres-setup/assets/111444562/e79795b0-8f95-4fe4-a1ff-2cc550748458)
+
+### Connecting to the PSQL terminal
+
+To connect to your Postgres server as the `postgres` user:
+* **For Windows Users**: `sudo -u postgres psql`
+* **For Mac Users**: `psql -U postgres`  
+
+### Using the PSQL terminal
 
 In your `psql` terminal:
 - `\du` to see a list of users
@@ -134,7 +145,7 @@ And you can also run any SQL commands from the `psql` terminal (remember the sem
 - `SELECT * FROM table;` to see all rows from the given table
 - `ALTER USER username WITH ENCRYPTED PASSWORD 'password';` to set a password (use single quotes)
 
-Tableplus Postgres Server Connection Configuration
+### Tableplus Postgres Server Connection Configuration
 - Host/Socket: `127.0.0.1` or `localhost`
 - Port: `5432`
 - User: Enter your username or `postgres`
